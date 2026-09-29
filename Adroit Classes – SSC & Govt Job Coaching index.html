@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adroit Classes – SSC & Govt Job Coaching</title>
+<style>
+:root{
+  --bg:#fdf6e9;--card:#fff;--ink:#1b1f3b;--muted:#5a5f7a;
+  --brand:#1d3fbb;--brand2:#3457e0;--accent:#f59e0b;--good:#0f9d58;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1226;--card:#1a1e3a;--ink:#f2f3fa;--muted:#a9adc8;--brand:#6c8cff;--brand2:#8aa2ff;--accent:#fbbf24}}
+:root[data-theme="dark"]{--bg:#0f1226;--card:#1a1e3a;--ink:#f2f3fa;--muted:#a9adc8;--brand:#6c8cff;--brand2:#8aa2ff;--accent:#fbbf24}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:920px;margin:auto;padding:0 20px}
+header{position:relative;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;text-align:center;padding:56px 20px 44px;padding-top:calc(56px + env(safe-area-inset-top,0px))}
+header h1{margin:0;font-size:clamp(2rem,7vw,3.2rem);letter-spacing:.5px}
+header p{margin:12px auto 24px;max-width:560px;font-size:1.1rem;opacity:.95}
+.btn{display:inline-block;background:var(--accent);color:#1b1f3b;font-weight:700;padding:14px 28px;border-radius:999px;text-decoration:none;margin:6px;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:transparent;color:#fff;border:2px solid #fff}
+.btn.small{padding:8px 16px;font-size:.85rem;border-radius:8px}
+.btn.danger{background:#e0553f;color:#fff}
+section{padding:40px 0}
+h2{text-align:center;margin:0 0 24px;color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center}
+.card b{display:block;font-size:1.05rem;margin-bottom:4px}
+.card span{color:var(--muted);font-size:.95rem}
+.panel{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.contact{text-align:center}
+.contact p{margin:8px 0}
+label{display:block;font-weight:600;margin:14px 0 6px;font-size:.9rem;color:var(--muted)}
+select,input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,.15);background:var(--bg);color:var(--ink);font-size:1rem}
+.fee-box{margin-top:18px;background:var(--bg);border:2px dashed var(--accent);border-radius:12px;padding:16px;text-align:center}
+.fee-box .amount{font-size:1.8rem;font-weight:800;color:var(--good)}
+.fee-box .dur{color:var(--muted);font-size:.9rem}
+.formrow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.formrow{grid-template-columns:1fr}}
+footer{text-align:center;color:var(--muted);padding:28px 20px;font-size:.9rem}
+.msg{margin-top:14px;padding:12px;border-radius:10px;font-size:.9rem;display:none}
+.msg.ok{background:rgba(15,157,88,.12);color:var(--good);display:block}
+#adminBtn{position:fixed;bottom:18px;right:18px;font-size:.85rem;font-weight:700;padding:10px 18px;border-radius:999px;background:var(--brand);color:#fff;border:none;cursor:pointer;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#adminBtn:hover{background:var(--brand2)}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal-bg.open{display:flex}
+.modal{background:var(--card);border-radius:16px;padding:24px;max-width:480px;width:100%;max-height:85vh;overflow:auto}
+.admin-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.admin-row input{width:90px}
+.booking-item{background:var(--bg);border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:.9rem}
+.brand-logo{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));left:16px;display:flex;align-items:center;gap:8px;z-index:10}
+.brand-logo .mono{width:38px;height:38px;border-radius:50%;background:var(--accent);color:#1b1f3b;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.brand-logo .name{color:#fff;font-size:.75rem;font-weight:600;opacity:.9;line-height:1.2}
+</style>
+</head>
+<body>
+
+<header>
+<div class="brand-logo">
+  <div class="mono">HD</div>
+  <div class="name">HAPPY<br>DHIMAN</div>
+</div>
+<h1>Adroit Classes</h1>
+<p>Best coaching for SSC and other Government Job exams. Your success starts here!</p>
+<a class="btn" href="tel:+919711260127">📞 Call Now</a>
+<a class="btn alt" href="https://wa.me/919711260127">WhatsApp Us</a>
+</header>
+
+<main class="wrap">
+
+<section>
+<h2>Choose Your Course & See Fees</h2>
+<div class="panel">
+<label for="courseSelect">Select a course</label>
+<select id="courseSelect"></select>
+<div class="fee-box">
+  <div class="amount" id="feeAmount">—</div>
+  <div class="dur" id="feeDur">Select a course above</div>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Why Join Adroit Classes?</h2>
+<div class="grid">
+<div class="card"><b>Expert Teaching</b><span>Clear concepts, easy methods</span></div>
+<div class="card"><b>Regular Tests</b><span>Practice and track progress</span></div>
+<div class="card"><b>Doubt Support</b><span>Personal attention to every student</span></div>
+<div class="card"><b>Focused Batches</b><span>Serious, friendly study environment</span></div>
+</div>
+</section>
+
+<section>
+<h2>Book a Free Demo Class</h2>
+<div class="panel">
+<form id="demoForm">
+  <div class="formrow">
+    <div><label>Your Name</label><input type="text" id="dName" required></div>
+    <div><label>Phone Number</label><input type="tel" id="dPhone" required pattern="[0-9]{10}" placeholder="10-digit number"></div>
+  </div>
+  <label>Course</label>
+  <select id="dCourse"></select>
+  <div class="formrow">
+    <div><label>Preferred Date</label><input type="date" id="dDate" required></div>
+    <div><label>Preferred Time</label>
+      <select id="dTime">
+        <option>9:00 AM – 11:00 AM</option>
+        <option>12:00 PM – 2:00 PM</option>
+        <option>4:00 PM – 6:00 PM</option>
+        <option>6:00 PM – 8:00 PM</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn" style="margin-top:18px;width:100%">Book Free Demo Class</button>
+  <div class="msg ok" id="bookMsg">🎉 Thanks! We'll call you to confirm your demo class slot.</div>
+</form>
+</div>
+</section>
+
+<section>
+<h2>Come Visit Us</h2>
+<div class="panel contact">
+<p><b>📍 Address</b><br>Safiabad Mod, Tata Showroom, 2nd Floor</p>
+<p><b>📞 Contact</b><br><a href="tel:+919711260127" style="color:var(--brand);font-weight:700;font-size:1.2rem">9711260127</a></p>
+<a class="btn" href="tel:+919711260127">Call to Join</a>
+</div>
+</section>
+
+</main>
+
+<footer>© Adroit Classes – Admissions Open<br><span style="opacity:.7">Founded by Happy Dhiman</span></footer>
+
+<button id="adminBtn">🔐 Admin Login</button>
+
+<div class="modal-bg" id="loginModal">
+  <div class="modal">
+    <h2 style="margin-top:0">Admin Login</h2>
+    <label>Password</label>
+    <input type="password" id="adminPass" placeholder="Enter admin password">
+    <div style="margin-top:16px;display:flex;gap:10px">
+      <button class="btn small" id="loginBtn">Login</button>
+      <button class="btn small alt" style="color:var(--ink);border-color:var(--muted)" id="closeLogin">Cancel</button>
+    </div>
+    <div class="msg" id="loginErr" style="color:#e0553f;display:none"></div>
+  </div>
+</div>
+
+<div class="modal-bg" id="adminModal">
+  <div class="modal">
+    <h2 style="margin-top:0">Admin Panel</h2>
+    <h3 style="margin-bottom:4px">Courses & Fees</h3>
+    <div id="courseEditor"></div>
+    <button class="btn small" id="addCourseBtn" style="margin-top:10px">+ Add Course</button>
+    <button class="btn small" id="saveCourses" style="margin-top:10px">Save Changes</button>
+    <hr style="margin:22px 0;opacity:.2">
+    <h3 style="margin-bottom:4px">Demo Class Bookings (<span id="bookCount">0</span>)</h3>
+    <div id="bookingList"></div>
+    <button class="btn small danger" id="clearBookings" style="margin-top:10px">Clear All Bookings</button>
+    <div style="margin-top:18px;text-align:right">
+      <button class="btn small alt" style="color:var(--ink);border-color:var(--muted)" id="logoutBtn">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DEFAULT_COURSES = [
+  {id:'cgl', name:'SSC CGL', fee:15000, dur:'6 months'},
+  {id:'chsl', name:'SSC CHSL', fee:12000, dur:'4 months'},
+  {id:'mts', name:'SSC MTS', fee:8000, dur:'3 months'},
+  {id:'bank', name:'Banking (IBPS / SBI)', fee:15000, dur:'6 months'},
+  {id:'rail', name:'Railway (RRB)', fee:12000, dur:'5 months'},
+  {id:'police', name:'Police / Constable', fee:10000, dur:'4 months'},
+];
+const ADMIN_PASSWORD = 'adroit9090'; // change this anytime by editing the page
+
+function loadCourses(){
+  try{ const s = localStorage.getItem('adroit_courses'); return s ? JSON.parse(s) : DEFAULT_COURSES; }
+  catch(e){ return DEFAULT_COURSES; }
+}
+function saveCourses(list){
+  try{ localStorage.setItem('adroit_courses', JSON.stringify(list)); }catch(e){}
+}
+function loadBookings(){
+  try{ const s = localStorage.getItem('adroit_bookings'); return s ? JSON.parse(s) : []; }
+  catch(e){ return []; }
+}
+function saveBookings(list){
+  try{ localStorage.setItem('adroit_bookings', JSON.stringify(list)); }catch(e){}
+}
+
+let courses = loadCourses();
+
+function populateCourseSelects(){
+  const opts = courses.map(c=>`<option value="${c.id}">${c.name}</option>`).join('');
+  document.getElementById('courseSelect').innerHTML = opts;
+  document.getElementById('dCourse').innerHTML = opts;
+  updateFee();
+}
+function updateFee(){
+  const id = document.getElementById('courseSelect').value;
+  const c = courses.find(x=>x.id===id);
+  if(c){
+    document.getElementById('feeAmount').textContent = '₹' + c.fee.toLocaleString('en-IN');
+    document.getElementById('feeDur').textContent = 'Course duration: ' + c.dur;
+  }
+}
+document.getElementById('courseSelect').addEventListener('change', updateFee);
+
+document.getElementById('demoForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const booking = {
+    name: document.getElementById('dName').value,
+    phone: document.getElementById('dPhone').value,
+    course: courses.find(c=>c.id===document.getElementById('dCourse').value)?.name || '',
+    date: document.getElementById('dDate').value,
+    time: document.getElementById('dTime').value,
+    submitted: new Date().toLocaleString('en-IN')
+  };
+  const list = loadBookings();
+  list.push(booking);
+  saveBookings(list);
+  document.getElementById('bookMsg').style.display = 'block';
+  this.reset();
+  populateCourseSelects();
+  setTimeout(()=>document.getElementById('bookMsg').style.display='none', 4000);
+});
+
+// Admin flow
+const loginModal = document.getElementById('loginModal');
+const adminModal = document.getElementById('adminModal');
+document.getElementById('adminBtn').onclick = ()=>{ loginModal.classList.add('open'); };
+document.getElementById('closeLogin').onclick = ()=>{ loginModal.classList.remove('open'); document.getElementById('loginErr').style.display='none'; };
+document.getElementById('loginBtn').onclick = ()=>{
+  const pass = document.getElementById('adminPass').value;
+  if(pass === ADMIN_PASSWORD){
+    loginModal.classList.remove('open');
+    document.getElementById('adminPass').value='';
+    document.getElementById('loginErr').style.display='none';
+    openAdmin();
+  } else {
+    document.getElementById('loginErr').textContent = 'Incorrect password.';
+    document.getElementById('loginErr').style.display='block';
+  }
+};
+document.getElementById('logoutBtn').onclick = ()=>{ adminModal.classList.remove('open'); };
+
+function openAdmin(){
+  renderCourseEditor();
+  renderBookings();
+  adminModal.classList.add('open');
+}
+function renderCourseEditor(){
+  const box = document.getElementById('courseEditor');
+  box.innerHTML = courses.map((c,i)=>`
+    <div class="admin-row">
+      <input type="text" value="${c.name}" data-field="name" data-i="${i}" style="flex:2">
+      <span>₹</span><input type="number" value="${c.fee}" data-field="fee" data-i="${i}">
+      <input type="text" value="${c.dur}" data-field="dur" data-i="${i}" style="flex:1.2" placeholder="duration">
+      <button class="btn small danger" data-remove="${i}">✕</button>
+    </div>`).join('');
+  box.querySelectorAll('[data-remove]').forEach(btn=>{
+    btn.onclick = ()=>{ courses.splice(Number(btn.dataset.remove),1); renderCourseEditor(); };
+  });
+}
+document.getElementById('addCourseBtn').onclick = ()=>{
+  courses.push({id:'c'+Date.now(), name:'New Course', fee:10000, dur:'3 months'});
+  renderCourseEditor();
+};
+document.getElementById('saveCourses').onclick = ()=>{
+  document.querySelectorAll('#courseEditor [data-field]').forEach(inp=>{
+    const i = Number(inp.dataset.i), f = inp.dataset.field;
+    courses[i][f] = f==='fee' ? Number(inp.value) : inp.value;
+  });
+  saveCourses(courses);
+  populateCourseSelects();
+  alert('Courses & fees updated!');
+};
+function renderBookings(){
+  const list = loadBookings();
+  document.getElementById('bookCount').textContent = list.length;
+  const box = document.getElementById('bookingList');
+  box.innerHTML = list.length ? list.slice().reverse().map(b=>`
+    <div class="booking-item">
+      <b>${b.name}</b> — ${b.phone}<br>
+      ${b.course} · ${b.date} · ${b.time}<br>
+      <span style="opacity:.6">Booked: ${b.submitted}</span>
+    </div>`).join('') : '<p style="color:var(--muted)">No bookings yet.</p>';
+}
+document.getElementById('clearBookings').onclick = ()=>{
+  if(confirm('Clear all demo class bookings?')){ saveBookings([]); renderBookings(); }
+};
+
+populateCourseSelects();
+</script>
+</body>
+</html>
